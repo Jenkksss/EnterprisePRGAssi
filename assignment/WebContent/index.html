@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-js-index.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<script type=”text/javascript” src=”bootstrap/js/bootstrap.min.js”></script>
+<meta charset="utf-8">
+<title>Enterprise Programming App</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="card-deck">
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">Choose a Data Type and Retrieve All
+						Films</h5>
+					<div class="form-check form-check-inline">
+						<input class="form-radio-input" type="radio" name="format"
+							id="xmlButton" value="xml"> <label
+							class="form-check-label" for="xmlButton">XML</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-radio-input" type="radio" name="format"
+							id="jsonButton" value="json" checked> <label
+							class="form-check-label" for="jsonButton">JSON</label>
+					</div>
+					<div class="form-check form-check-inline">
+						<input class="form-radio-input" type="radio" name="format"
+							id="plainTxtButton" value="plainTxt"> <label
+							class="form-check-label" for="plainTxtButton">Plain Text</label>
+					</div>
+					<form action="#">
+						<button type="button" value="Get All Films"
+							onclick='getAllFilms()' class="btn btn-primary">Get All Films</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card-body">
+			<h5 class="card-title">Search A Film by ID or Title</h5>
+			<form action="/">
+				<input type=text class=”form-group” id="filmTitle"
+					placeholder="Enter a film title">
+				<button type="submit" id="filmByTitle" class="btn btn-primary"
+					onclick="getFilmByTitle()">Get Film By Title</button>
+
+
+			</form>
+		</div>
+	</div>
+	<div class="card">
+		<div class="form-group" id="film">
+			<input type=text class=”form-group” id="titleUpdate"
+				placeholder="Title"> <input type=text class=”form-group”
+				id="starsUpdate" placeholder="Rating in Stars"> <br> <input
+				type=text class=”form-group” id="IdUpdate" placeholder="ID"> <input
+				type=text class=”form-group” id="reviewUpdate"
+				placeholder="Write A Review"> <br> <input type=text
+				class=”form-group” id="yearUpdate" placeholder="Year Of Release">
+			<input type=text class=”form-group” id="DirectorUpdate"
+				placeholder="Name of Director"> <br>
+			<button type="button" class="btn btn-primary"
+				onclick='updateFilm("idUpdate", "titleUpdate", "yearUpdate", "directorUpdate", "starsUpdate", "reviewUpdate")'>Update
+				Film</button>
+			<br> <input type=text class=”form-group” id="titleInsert"
+				placeholder="Title"> <input type=text class=”form-group”
+				id="StarsInsert" placeholder="Rating in Stars"> <br> <input
+				type=text class=”form-group” id="idInsert" placeholder="ID">
+			<input type=text class=”form-group” id="reviewInsert"
+				placeholder="Write A Review"> <br> <input type=text
+				class=”form-group” id="yearInsert" placeholder="Year Of Release">
+			<input type=text class=”form-group” id="directorInsert"
+				placeholder="Name of Director"> <br>
+			<button type="button" class="btn btn-primary"
+				onclick='insertFilm("titleInsert", "yearInsert", "directorInsert", "starsInsert", "reviewInsert")'>Insert
+				Film</button>
+			<div class="card">
+				<input type="text" name="id" class="form-control" id="idDelete"
+					placeholder="Film ID" required>
+				<button type="button" onclick='deleteFilm("id")'
+					class="btn btn-primary">Delete Film By ID</button>
+			</div>
+			<div class="card">
+				<h5 class="card-title">Results:</h5>
+				<div id="results"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

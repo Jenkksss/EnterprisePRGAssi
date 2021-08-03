@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>getAllFilms</servlet-name>
+		<servlet-class>controllers.getAllFilms</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getAllFilms</servlet-name>
+		<url-pattern>/get-all-films</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>getFilm</servlet-name>
+		<servlet-class>controllers.getFilm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>getFilm</servlet-name>
+		<url-pattern>/get-film</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>deleteFilm</servlet-name>
+		<servlet-class>controllers.deleteFilm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>deleteFilm</servlet-name>
+		<url-pattern>/delete-film</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>updateFilm</servlet-name>
+		<servlet-class>controllers.updateFilm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>updateFilm</servlet-name>
+		<url-pattern>/update-film</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>insertFilm</servlet-name>
+		<servlet-class>controllers.insertFilm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>insertFilm</servlet-name>
+		<url-pattern>/insert-film</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
